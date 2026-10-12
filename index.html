@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Возрождение — Эко-кремация с посадкой дерева</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Плавающие частицы (листья) -->
+    <canvas id="leaves"></canvas>
+
+    <!-- Навигация -->
+    <nav class="nav">
+        <div class="nav__logo">
+            <span class="nav__logo-leaf">🌿</span>
+            <span>Возрождение</span>
+        </div>
+        <ul class="nav__links">
+            <li><a href="#concept">Концепция</a></li>
+            <li><a href="#packages">Пакеты</a></li>
+            <li><a href="#platform">Платформа</a></li>
+            <li><a href="#constructor">Конструктор</a></li>
+            <li><a href="#memorial" class="nav__cta">Создать мемориал</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__badge reveal">Жизнь, которая продолжается</div>
+            <h1 class="hero__title reveal">
+                Не памятник.<br>
+                <span class="hero__accent">Дерево.</span>
+            </h1>
+            <p class="hero__subtitle reveal">
+                Эко-кремация с посадкой живого дерева.<br>
+                Живой мемориал с GPS-координатами и цифровой страницей памяти.
+            </p>
+            <div class="hero__actions reveal">
+                <a href="#constructor" class="btn btn--primary">Выбрать дерево</a>
+                <a href="#concept" class="btn btn--ghost">Узнать больше</a>
+            </div>
+        </div>
+        <div class="hero__tree">
+            <svg viewBox="0 0 400 500" class="hero__tree-svg">
+                <path class="tree-trunk" d="M200 480 Q195 350 200 250 Q205 150 200 80" stroke="currentColor" stroke-width="3" fill="none"/>
+                <g class="tree-branches">
+                    <path d="M200 250 Q150 220 120 180" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M200 250 Q250 220 280 180" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M200 180 Q160 150 140 110" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M200 180 Q240 150 260 110" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M200 120 Q180 90 170 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M200 120 Q220 90 230 60" stroke="currentColor" stroke-width="2" fill="none"/>
+                </g>
+                <g class="tree-leaves">
+                    <circle cx="120" cy="180" r="25" fill="currentColor"/>
+                    <circle cx="280" cy="180" r="25" fill="currentColor"/>
+                    <circle cx="140" cy="110" r="30" fill="currentColor"/>
+                    <circle cx="260" cy="110" r="30" fill="currentColor"/>
+                    <circle cx="170" cy="60" r="28" fill="currentColor"/>
+                    <circle cx="230" cy="60" r="28" fill="currentColor"/>
+                    <circle cx="200" cy="40" r="35" fill="currentColor"/>
+                </g>
+            </svg>
+        </div>
+        <div class="hero__scroll">
+            <span>Прокрутите вниз</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ПРОБЛЕМА -->
+    <section class="problem" id="concept">
+        <div class="container">
+            <div class="section-label reveal">Контекст</div>
+            <h2 class="section-title reveal">Память не должна превращаться в бетон</h2>
+            <div class="problem__grid">
+                <div class="stat-card reveal">
+                    <div class="stat-card__number">75%</div>
+                    <div class="stat-card__label">доля кремации в городах-миллионниках</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-card__number">25 000 ₽</div>
+                    <div class="stat-card__label">средняя стоимость традиционного захоронения</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-card__number">1,28 трлн ₽</div>
+                    <div class="stat-card__label">рынок ритуальных услуг в России</div>
+                </div>
+            </div>
+            <p class="problem__text reveal">
+                Кладбища переполнены. Земля дорожает. Заброшенные могилы становятся повседневной нормой мегаполиса.
+                Мы предлагаем альтернативу — <strong>живой мемориал</strong>, который растёт вместе с памятью.
+            </p>
+        </div>
+    </section>
+
+    <!-- РЕШЕНИЕ / ПРОЦЕСС -->
+    <section class="solution">
+        <div class="container">
+            <div class="section-label reveal">Решение</div>
+            <h2 class="section-title reveal">Три шага к живой памяти</h2>
+            <div class="process">
+                <div class="process__step reveal">
+                    <div class="process__icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M30 40 L38 48 L52 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="process__num">01</div>
+                    <h3 class="process__title">Кремация</h3>
+                    <p class="process__text">Бережная кремация в партнёрском крематории с соблюдением всех стандартов.</p>
+                </div>
+                <div class="process__arrow reveal">→</div>
+                <div class="process__step reveal">
+                    <div class="process__icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <ellipse cx="40" cy="45" rx="20" ry="25" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M30 30 Q40 20 50 30" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="process__num">02</div>
+                    <h3 class="process__title">Биокапсула</h3>
+                    <p class="process__text">Прагматичная биоразлагаемая урна с питательной средой для будущего дерева.</p>
+                </div>
+                <div class="process__arrow reveal">→</div>
+                <div class="process__step reveal">
+                    <div class="process__icon">
+                        <svg viewBox="0 0 80 80" fill="none">
+                            <path d="M40 70 L40 35" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="40" cy="25" r="18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            <path d="M30 60 L50 60" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="process__num">03</div>
+                    <h3 class="process__title">Посадка дерева</h3>
+                    <p class="process__text">Торжественная посадка саженца в эко-парке с GPS-координатами и QR-мемориалом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЦЕЛЕВАЯ АУДИТОРИЯ -->
+    <section class="audience">
+        <div class="container">
+            <div class="section-label reveal">Для кого</div>
+            <h2 class="section-title reveal">Мы работаем с теми, кто ценит жизнь</h2>
+            <div class="audience__grid">
+                <div class="audience__card reveal">
+                    <div class="audience__icon">🏙️</div>
+                    <h3>Городские жители 35–55</h3>
+                    <p>Ценят технологичность, эстетику и отсутствие рутины традиционных кладбищ.</p>
+                </div>
+                <div class="audience__card reveal">
+                    <div class="audience__icon">🕊️</div>
+                    <h3>Планирующие заранее</h3>
+                    <p>Хотят избавить родственников от лишних забот и выбрать живой образ памяти.</p>
+                </div>
+                <div class="audience__card reveal">
+                    <div class="audience__icon">🌍</div>
+                    <h3>Экологически ориентированные</h3>
+                    <p>Принципиально выбирают нулевой углеродный след и сохранение природы.</p>
+                </div>
+                <div class="audience__card reveal">
+                    <div class="audience__icon">🌳</div>
+                    <h3>Семьи погибших</h3>
+                    <p>Ищут светлый, достойный символ вечной памяти в виде живого дерева.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПАКЕТЫ -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <div class="section-label reveal">Продуктовая линейка</div>
+            <h2 class="section-title reveal">Четыре пакета на любой запрос</h2>
+            <div class="packages__grid">
+                <div class="package reveal" data-package="basic">
+                    <div class="package__tag">Базовый</div>
+                    <div class="package__price">35–45 <span>тыс. ₽</span></div>
+                    <ul class="package__list">
+                        <li>Кремация</li>
+                        <li>Биокапсула</li>
+                        <li>Саженец лиственного дерева</li>
+                        <li>GPS-точка в общем эко-парке</li>
+                    </ul>
+                    <button class="btn btn--ghost" onclick="selectPackage('basic')">Выбрать</button>
+                </div>
+                <div class="package package--featured reveal" data-package="memorial">
+                    <div class="package__tag">Популярный</div>
+                    <div class="package__price">60–75 <span>тыс. ₽</span></div>
+                    <ul class="package__list">
+                        <li>Благородный саженец дуба или кедра</li>
+                        <li>Персональная табличка</li>
+                        <li>QR-страница памяти</li>
+                        <li>Торжественная церемония</li>
+                    </ul>
+                    <button class="btn btn--primary" onclick="selectPackage('memorial')">Выбрать</button>
+                </div>
+                <div class="package reveal" data-package="family">
+                    <div class="package__tag">Семейный</div>
+                    <div class="package__price">90–120 <span>тыс. ₽</span></div>
+                    <ul class="package__list">
+                        <li>Семейная аллея до 4 мест</li>
+                        <li>Закрытая секция эко-парка</li>
+                        <li>Расширенный уход агрономами</li>
+                        <li>Гарантия на 5 лет</li>
+                    </ul>
+                    <button class="btn btn--ghost" onclick="selectPackage('family')">Выбрать</button>
+                </div>
+                <div class="package reveal" data-package="preorder">
+                    <div class="package__tag">Предзаказ</div>
+                    <div class="package__price">от 25 <span>тыс. ₽</span></div>
+                    <ul class="package__list">
+                        <li>Прижизненный контракт</li>
+                        <li>Фиксация условий и цены</li>
+                        <li>Бронь участка в лесополосе</li>
+                        <li>Гибкие условия оплаты</li>
+                    </ul>
+                    <button class="btn btn--ghost" onclick="selectPackage('preorder')">Выбрать</button>
+                </div>
+            </div>
+            <p class="packages__note reveal">
+                ✦ Все пакеты включают биоразлагаемую питательную урну и гарантию приживаемости дерева.
+            </p>
+        </div>
+    </section>
+
+    <!-- ЦИФРОВАЯ ПЛАТФОРМА -->
+    <section class="platform" id="platform">
+        <div class="container">
+            <div class="section-label reveal">Цифровая платформа</div>
+            <h2 class="section-title reveal">Единый интерфейс, сохраняющий память на поколения</h2>
+            <div class="platform__grid">
+                <div class="platform__card reveal">
+                    <div class="platform__num">01</div>
+                    <h3>Онлайн-конструктор</h3>
+                    <p>Выбор породы дерева, локации на карте парка и памятной гравировки.</p>
+                    <a href="#constructor" class="platform__link">Попробовать →</a>
+                </div>
+                <div class="platform__card reveal">
+                    <div class="platform__num">02</div>
+                    <h3>Цифровой мемориал</h3>
+                    <p>Персональный QR-код на табличке ведёт на страницу воспоминаний с фото и видео.</p>
+                    <a href="#memorial" class="platform__link">Посмотреть демо →</a>
+                </div>
+                <div class="platform__card reveal">
+                    <div class="platform__num">03</div>
+                    <h3>Онлайн-трансляция</h3>
+                    <p>Прямой эфир церемонии посадки для родственников из любой точки мира.</p>
+                    <span class="platform__link platform__link--disabled">Скоро</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНСТРУКТОР -->
+    <section class="constructor" id="constructor">
+        <div class="container">
+            <div class="section-label reveal">Конструктор мемориала</div>
+            <h2 class="section-title reveal">Создайте своё живое дерево</h2>
+            <div class="constructor__layout">
+                <div class="constructor__preview reveal">
+                    <div class="constructor__map">
+                        <div class="constructor__map-grid"></div>
+                        <div class="constructor__marker" id="treeMarker">
+                            <div class="constructor__tree-visual" id="treeVisual">🌳</div>
+                            <div class="constructor__pulse"></div>
+                        </div>
+                    </div>
+                    <div class="constructor__info">
+                        <div class="constructor__info-row">
+                            <span>Порода:</span>
+                            <strong id="previewSpecies">Дуб</strong>
+                        </div>
+                        <div class="constructor__info-row">
+                            <span>Локация:</span>
+                            <strong id="previewLocation">Аллея А, место 12</strong>
+                        </div>
+                        <div class="constructor__info-row">
+                            <span>Память:</span>
+                            <strong id="previewName">Ваше имя</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="constructor__controls reveal">
+                    <div class="control-group">
+                        <label>Порода дерева</label>
+                        <div class="species-grid" id="speciesGrid">
+                            <button class="species-btn active" data-species="Дуб" data-emoji="🌳">🌳 Дуб</button>
+                            <button class="species-btn" data-species="Кедр" data-emoji="🌲">🌲 Кедр</button>
+                            <button class="species-btn" data-species="Берёза" data-emoji="🌿">🌿 Берёза</button>
+                            <button class="species-btn" data-species="Клён" data-emoji="🍁">🍁 Клён</button>
+                            <button class="species-btn" data-species="Сосна" data-emoji="🌲">🌲 Сосна</button>
+                            <button class="species-btn" data-species="Яблоня" data-emoji="🌸">🌸 Яблоня</button>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label>Имя на мемориале</label>
+                        <input type="text" class="control-input" id="nameInput" placeholder="Введите имя" maxlength="40">
+                    </div>
+                    <div class="control-group">
+                        <label>Годы жизни</label>
+                        <input type="text" class="control-input" id="yearsInput" placeholder="1950 — 2024" maxlength="20">
+                    </div>
+                    <div class="control-group">
+                        <label>Эпитафия</label>
+                        <textarea class="control-input" id="epitaphInput" placeholder="Светлая память..." maxlength="200"></textarea>
+                    </div>
+                    <button class="btn btn--primary btn--full" onclick="createMemorial()">Создать мемориал</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДЕМО МЕМОРИАЛ -->
+    <section class="memorial" id="memorial">
+        <div class="container">
+            <div class="section-label reveal">Цифровой мемориал</div>
+            <h2 class="section-title reveal">Страница, которая живёт вечно</h2>
+            <div class="memorial__demo reveal" id="memorialDemo">
+                <div class="memorial__qr">
+                    <svg viewBox="0 0 100 100" class="qr-code">
+                        <rect width="100" height="100" fill="var(--color-cream)"/>
+                        <g fill="var(--color-dark)">
+                            <rect x="10" y="10" width="20" height="20"/>
+                            <rect x="70" y="10" width="20" height="20"/>
+                            <rect x="10" y="70" width="20" height="20"/>
+                            <rect x="15" y="15" width="10" height="10" fill="var(--color-cream)"/>
+                            <rect x="75" y="15" width="10" height="10" fill="var(--color-cream)"/>
+                            <rect x="15" y="75" width="10" height="10" fill="var(--color-cream)"/>
+                            <rect x="18" y="18" width="4" height="4"/>
+                            <rect x="78" y="18" width="4" height="4"/>
+                            <rect x="18" y="78" width="4" height="4"/>
+                            <rect x="40" y="10" width="5" height="5"/>
+                            <rect x="50" y="15" width="5" height="5"/>
+                            <rect x="40" y="25" width="5" height="5"/>
+                            <rect x="55" y="30" width="5" height="5"/>
+                            <rect x="10" y="40" width="5" height="5"/>
+                            <rect x="25" y="45" width="5" height="5"/>
+                            <rect x="40" y="40" width="20" height="20"/>
+                            <rect x="45" y="45" width="10" height="10" fill="var(--color-cream)"/>
+                            <rect x="48" y="48" width="4" height="4"/>
+                            <rect x="70" y="40" width="5" height="5"/>
+                            <rect x="80" y="50" width="5" height="5"/>
+                            <rect x="10" y="55" width="5" height="5"/>
+                            <rect x="25" y="60" width="5" height="5"/>
+                            <rect x="40" y="70" width="5" height="5"/>
+                            <rect x="55" y="75" width="5" height="5"/>
+                            <rect x="70" y="70" width="5" height="5"/>
+                            <rect x="80" y="80" width="5" height="5"/>
+                        </g>
+                    </svg>
+                    <p class="memorial__qr-text">Наведите камеру</p>
+                </div>
+                <div class="memorial__content">
+                    <div class="memorial__tree-icon" id="memorialTreeIcon">🌳</div>
+                    <h3 class="memorial__name" id="memorialName">Иван Петрович Сидоров</h3>
+                    <div class="memorial__years" id="memorialYears">1952 — 2024</div>
+                    <div class="memorial__divider"></div>
+                    <p class="memorial__epitaph" id="memorialEpitaph">
+                        «Он посадил сад, который будет цвести после него. Его любовь — в каждом листе.»
+                    </p>
+                    <div class="memorial__meta">
+                        <div class="memorial__meta-item">
+                            <span>📍</span>
+                            <span>Эко-парк «Возрождение»</span>
+                        </div>
+                        <div class="memorial__meta-item">
+                            <span>🌳</span>
+                            <span id="memorialSpecies">Дуб черешчатый</span>
+                        </div>
+                        <div class="memorial__meta-item">
+                            <span>📅</span>
+                            <span id="memorialDate">Посажен 12 октября 2026</span>
+                        </div>
+                    </div>
+                    <div class="memorial__actions">
+                        <button class="btn btn--ghost" onclick="alert('Здесь откроется галерея воспоминаний')">📷 Воспоминания</button>
+                        <button class="btn btn--ghost" onclick="alert('Здесь можно оставить сообщение')">💬 Оставить свет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta__title reveal">Начните сегодня.<br>Дерево будет расти завтра.</h2>
+            <p class="cta__text reveal">Оставьте заявку — мы свяжемся с вами в течение часа и поможем выбрать подходящий пакет.</p>
+            <form class="cta__form reveal" onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.');">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                <button type="submit" class="btn btn--primary">Получить консультацию</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">🌿 Возрождение</div>
+                    <p>Эко-кремация с посадкой дерева. Жизнь, которая продолжается.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Навигация</h4>
+                    <a href="#concept">Концепция</a>
+                    <a href="#packages">Пакеты</a>
+                    <a href="#platform">Платформа</a>
+                    <a href="#constructor">Конструктор</a>
+                </div>
+                <div class="footer__links">
+                    <h4>Контакты</h4>
+                    <a href="tel:+78001234567">+7 (800) 123-45-67</a>
+                    <a href="mailto:hello@vozrozhdenie.ru">hello@vozrozhdenie.ru</a>
+                    <a href="#">Москва, ул. Лесная, 1</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© 2026 Возрождение. Все права защищены.</span>
+                <span>MVP цифровой платформы</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
